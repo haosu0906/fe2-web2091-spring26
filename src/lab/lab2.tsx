@@ -1,110 +1,121 @@
-import { Toaster } from "react-hot-toast";
-import {  Link } from "react-router-dom";
-import { Button, Layout, Form , Input, Modal } from "antd";
-import { Content, Footer, Header } from "antd/es/layout/layout";
- import { Table } from "antd";
-import { useState } from "react";
-const onFinish = (values: any) => {
-    console.log(values);
-  };
- 
+import { Table, Tag, Button, Space, Popconfirm } from "antd";
 
-const columns = [
-  { title: "id", dataIndex: "id" },
-  { title: "name", dataIndex: "name" },
-  { title: "age", dataIndex: "age" },
-  { title: "major", dataIndex: "major" }
+// ==============================
+// BÀI 1: Bảng Sinh viên
+// ==============================
+const columns1 = [
+  { title: "ID", dataIndex: "id", key: "id" },
+  { title: "Name", dataIndex: "name", key: "name" },
+  { title: "Age", dataIndex: "age", key: "age" },
+  { title: "Major", dataIndex: "major", key: "major" },
 ];
 
-const data = [
-  { key: 1, id:1, name: "tu", age: '19' , major:'IT'},
-  { key: 2, id:2, name: "hoang", age: '19' , major: 'designer'},
-  { key: 3, id:3, name: "thu", age: '19' , major: 'business'},
-  { key: 4, id:4, name: "tuan", age: '19' , major: 'travel'},
-  { key: 5, id:5, name: "hiep", age: '19' , major: 'IT'},
+const data1 = [
+  { key: 1, id: 1, name: "Tu", age: 19, major: "IT" },
+  { key: 2, id: 2, name: "Hoang", age: 19, major: "Designer" },
+  { key: 3, id: 3, name: "Thu", age: 19, major: "Business" },
+  { key: 4, id: 4, name: "Tuan", age: 19, major: "Travel" },
+  { key: 5, id: 5, name: "Hiep", age: 19, major: "IT" },
 ];
 
+// ==============================
+// BÀI 2: Danh sách sản phẩm
+// ==============================
+const columns2 = [
+  { title: "ID", dataIndex: "id", key: "id" },
+  { title: "Product Name", dataIndex: "productName", key: "productName" },
+  { title: "Price", dataIndex: "price", key: "price" },
+  { title: "Category", dataIndex: "category", key: "category" },
+];
 
-function Lab2() {       
-  const [open, setOpen] = useState(false);
+// Dữ liệu 5 sản phẩm
+const data2 = [
+  { key: 1, id: 1, productName: "Laptop Dell Inspiron", price: "15.000.000đ", category: "Laptop" },
+  { key: 2, id: 2, productName: "iPhone 15 Pro", price: "25.000.000đ", category: "Điện thoại" },
+  { key: 3, id: 3, productName: "Chuột Logitech G102", price: "400.000đ", category: "Phụ kiện" },
+  { key: 4, id: 4, productName: "Bàn phím cơ AKKO", price: "1.200.000đ", category: "Phụ kiện" },
+  { key: 5, id: 5, productName: "Màn hình LG 24inch", price: "3.500.000đ", category: "Màn hình" },
+];
+
+// ==============================
+// BÀI 3: User Management
+// ==============================
+const columns3 = [
+  { title: "ID", dataIndex: "id", key: "id" },
+  { title: "Name", dataIndex: "name", key: "name" },
+  { title: "Email", dataIndex: "email", key: "email" },
+  {
+    title: "Status",
+    dataIndex: "status",
+    key: "status",
+    render: (status) => (
+      <Tag color={status === "active" ? "green" : "red"}>
+        {status}
+      </Tag>
+    ),
+  },
+  {
+    title: "Action",
+    key: "action",
+    render: (_, record) => (
+      <Space size="middle">
+        <Button type="link">Edit</Button>
+        <Popconfirm
+          title="Xác nhận xóa"
+          description="Bạn có chắc chắn muốn xóa không?"
+          okText="Có"
+          cancelText="Không"
+        >
+          <Button type="link" danger>Delete</Button>
+        </Popconfirm>
+      </Space>
+    ),
+  },
+];
+
+const data3 = [
+  { key: 1, id: 1, name: "Nguyễn Văn A", email: "nva@gmail.com", status: "active" },
+  { key: 2, id: 2, name: "Trần Thị B", email: "ttb@gmail.com", status: "inactive" },
+  { key: 3, id: 3, name: "Lê Văn C", email: "lvc@gmail.com", status: "active" },
+];
+
+// ==============================
+// COMPONENT CHÍNH
+// ==============================
+function Lab2() {
   return (
-    
-    <>
-      <nav className="bg-blue-600 text-white shadow">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="#" className="text-xl font-semibold">
-            <strong>WEB2091 Lab1</strong>
-          </Link>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="#" className="hover:text-gray-200">
-              Trang chủ
-            </Link>
-            <Link to="/list" className="hover:text-gray-200">
-              Danh sách
-            </Link>
-            <Link to="/add" className="hover:text-gray-200">
-              Thêm mới
-            </Link>
-          </div>
-
-          <div className="hidden md:flex items-center space-x-6">
-            
-          </div>
-        </div>
-      </nav>
-
-      {/* MAIN CONTENT */}
-      <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
-        <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
-        <Button type="primary">Click me</Button>
-        <Button type="default">Click me</Button>
-        <Button type="dashed">Click me</Button>
-        <Button type="link">Click me</Button>
-        <Button type="text">Click me</Button>
-        <Button type="text">Click me</Button>
-        <Layout>
-      <Header style={{ color: "white" }}>Header</Header>
-      <Content style={{ padding: 20 }}>Content
-        <Form onFinish={onFinish}>
-      <Form.Item
-        name="email"
-        rules={[{ required: true, message: "Nhập email" }]}
-      >
-        <Input type= "email"placeholder="Email" />
-        
-      </Form.Item>
-
-      <Form.Item label= "username" name="username">
-        <Input type= "text"placeholder="username" />
-        <Button htmlType="submit" type="primary">
-          Login 
-        </Button>
-      </Form.Item>
-    </Form>
-    <Table columns={columns} dataSource={data} />;
-     <>
-      <Button onClick={() => setOpen(true)}>Open</Button>
-
-      <Modal
-        open={open}
-        onCancel={() => setOpen(false)}
-        onOk={() => setOpen(false)}
-      >
-       <Input type= "email"placeholder="Email" />  
-       <Input type= "password"placeholder="password" />  
-       <Input type= "text"placeholder="role" />  
-      </Modal>
-    </>
-      </Content>
-      <Footer>Footer</Footer>
-    </Layout>
-      </div>
+    <div style={{ padding: "40px", maxWidth: "1000px", margin: "0 auto" }}>
       
-     
+      {/* HIỂN THỊ BÀI 1 */}
+      <h2>Bài 1: Bảng Sinh viên</h2>
+      <Table 
+        columns={columns1} 
+        dataSource={data1} 
+        pagination={false} 
+      />
 
-      <Toaster />
-    </>
+      <div style={{ margin: "40px 0" }}></div>
+
+      {/* HIỂN THỊ BÀI 2 */}
+      <h2>Bài 2: Danh sách sản phẩm</h2>
+      {/* Thêm pagination={pageSize: 3} theo yêu cầu */}
+      <Table 
+        columns={columns2} 
+        dataSource={data2} 
+        pagination={{ pageSize: 3 }} 
+      />
+
+      <div style={{ margin: "40px 0" }}></div>
+
+      {/* HIỂN THỊ BÀI 3 */}
+      <h2>Bài 3: User Management</h2>
+      <Table 
+        columns={columns3} 
+        dataSource={data3} 
+        pagination={false} 
+      />
+
+    </div>
   );
 }
 

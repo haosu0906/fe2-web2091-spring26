@@ -1,5 +1,5 @@
 
-// import Lab1 from "./lab/lab1";
+import Lab1 from "./lab/lab1";
 import Lab2 from "./lab/lab2";
 
 
@@ -11,7 +11,7 @@ function App() {
       
       
      
-     {/* <Lab1/> */}
+     <Lab1/>
      <Lab2/>
     </>
     
