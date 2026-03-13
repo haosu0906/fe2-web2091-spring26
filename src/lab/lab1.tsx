@@ -37,10 +37,10 @@ function Lab1() {
             <Link to="#" className="hover:text-gray-200">
               Trang chủ
             </Link>
-            <Link to="/list" className="hover:text-gray-200">
+            <Link to="lab2" className="hover:text-gray-200">
               Danh sách
             </Link>
-            <Link to="/add" className="hover:text-gray-200">
+            <Link to="Lab3" className="hover:text-gray-200">
               Thêm mới
             </Link>
           </div>
@@ -54,12 +54,6 @@ function Lab1() {
       {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
-        <Button type="primary">Click me</Button>
-        <Button type="default">Click me</Button>
-        <Button type="dashed">Click me</Button>
-        <Button type="link">Click me</Button>
-        <Button type="text">Click me</Button>
-        <Button type="text">Click me</Button>
         <Layout>
       <Header style={{ color: "white" }}>Header</Header>
       <Content style={{ padding: 20 }}>Content
