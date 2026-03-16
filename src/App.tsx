@@ -4,6 +4,8 @@ import Lab1 from "./lab/lab1";
 import Lab2 from "./lab/lab2";
 import { Link, Route, Routes } from "react-router-dom";
 import Lab3 from "./lab/lab3";
+import StoryForm from "./lab/lab4";
+import Lab4 from "./lab/lab4";
 
 
 function App() {
@@ -24,6 +26,9 @@ function App() {
             <Link to="/lab3">
               <Button type="primary" size="large"> Lab 3</Button>
             </Link>
+            <Link to="/lab4">
+              <Button type="primary" size="large"> Lab 4</Button>
+            </Link>
           </Space>
         </div>
 
@@ -37,6 +42,7 @@ function App() {
             <Route path="/lab1" element={<Lab1 />} />
             <Route path="/lab2" element={<Lab2 />} />
             <Route path="/lab3" element={<Lab3 />} />
+            <Route path="/lab4" element={<Lab4 />} />
           </Routes>
         </div>
 

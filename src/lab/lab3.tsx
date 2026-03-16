@@ -246,9 +246,11 @@ function Lab3() {
           <p><strong>Category:</strong> {postData.category}</p>
           <p><strong>Content:</strong> {postData.content}</p>
           <p><strong>Image URL:</strong> {postData.imageUrl}</p>
+            
           
           {postData.imageUrl && (
             <img src={postData.imageUrl} alt="Preview" style={{ maxWidth: "100%", marginTop: 10, borderRadius: 8 }} />
+             
           )}
         </div>
       )}
