@@ -119,6 +119,12 @@ const StoryForm = () => {
         <Form.Item label="Tác giả" name="author">
           <Input />
         </Form.Item>
+        <Form.Item label="ảnh " name="image">
+          <Input />
+        </Form.Item>
+        <Form.Item label="ngày tạo " name="createdAt">
+          <Input />
+        </Form.Item>
 
        
         <Form.Item

@@ -18,7 +18,7 @@ function Lab3() {
     <nav className="bg-blue-600 text-white shadow">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="#" className="text-xl font-semibold">
-            <strong>WEB2091 Lab1</strong>
+            <strong>WEB2091 Lab3</strong>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

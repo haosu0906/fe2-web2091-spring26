@@ -101,7 +101,7 @@ function Lab2() {
         </div>
       </nav>
     <div style={{ padding: "40px", maxWidth: "1000px", margin: "0 auto" }}>
-      
+       nbdnbdnbhjjwnnn
      
       <h2>Bài 1: Bảng Sinh viên</h2>
       <Table 
@@ -110,6 +110,7 @@ function Lab2() {
         pagination={false} 
       />
 
+  
       <div style={{ margin: "40px 0" }}></div>
 
       

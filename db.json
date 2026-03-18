@@ -2,9 +2,20 @@
   "stories": [
     {
       "title": "Naruto",
-      "author": "Masashi Kishimoto",
-      "image": "https://image.com/naruto.jpg",
-      "description": "Truyện ninja nổi tiếng"
+      "author": "khong biet ten tac gia",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSijajcNub-_0abpb6EueY2tvePT7SS-6wbWlmjxuOOJvovcp1lCjLatK6mwIqrr5TbXpn4W1vbg3QZldRAS1iTiGFCp3niuklnUV4CUCM&s=10",
+      "description": "truyen nay hay lam nhung t chua doc dau",
+      "createdAt": "2026-03-18T10:00:00Z",
+      "id": 1
+    },
+    {
+      "title": "doraemon",
+      "author": "fujiko fujio",
+      "image": "https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/doraemon_tap_moi_nhat_2026_cover_62ebedefaf.png",
+      "createdAt": "2026/3/12",
+      "categoryId": 10,
+      "description": "dd",
+      "id": 3
     }
   ],
   "categories": [
