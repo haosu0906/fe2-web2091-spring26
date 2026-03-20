@@ -2,6 +2,7 @@ import { Table, Image, Spin, Button, Input, Space, message, Popconfirm } from "a
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const StoryList = () => {
   const queryClient = useQueryClient();
@@ -82,6 +83,7 @@ const StoryList = () => {
           okText="Có, xóa"
           cancelText="Không"
         >
+          <Link to={`/edit/${record.id}`}>sua</Link>
           <Button danger type="primary">
             Xóa
           </Button>
