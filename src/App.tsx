@@ -10,7 +10,10 @@ import StoryList from "./lab/lab5";
 import { EditStory } from "./lab/lab6";
 import { ThemeProvider } from "./context/ThemeContext";
 import { UserProvider } from "./context/UserContext";
+import { Login } from "./pages/Login";
 import { AppHeader } from "./components/Header";
+import Register from "./pages/Register";
+
 
 
 function App() {
@@ -42,6 +45,7 @@ function App() {
             <Link to="/lab6">
               <Button type="primary" size="large"> Lab 6</Button>
             </Link>
+            
           </Space>
         </div>
 
@@ -58,6 +62,8 @@ function App() {
             <Route path="/lab4" element={<Lab4 />} />
             <Route path="/lab5" element={<StoryList />} />
             <Route path="/edit/:id" element={<EditStory />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
 
         </div>
