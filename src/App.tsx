@@ -8,12 +8,17 @@ import StoryForm from "./lab/lab4";
 import Lab4 from "./lab/lab4";
 import StoryList from "./lab/lab5";
 import { EditStory } from "./lab/lab6";
+import { ThemeProvider } from "./context/ThemeContext";
+import { UserProvider } from "./context/UserContext";
+import { AppHeader } from "./components/Header";
 
 
 function App() {
 
   return (
-    
+   <ThemeProvider> 
+    <UserProvider>
+      <AppHeader/>
     <>
      <div style={{ padding: "20px", maxWidth: "1200px", margin: "0 auto" }}>
       
@@ -59,6 +64,8 @@ function App() {
 
       </div>
     </>
+    </UserProvider>
+    </ThemeProvider>
     
   );
 }

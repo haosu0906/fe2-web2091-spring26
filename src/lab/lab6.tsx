@@ -25,7 +25,7 @@ export function EditStory(){
     }, [data]);
     const mutation = useMutation({
         mutationFn: async(values:any) =>{
-            return axios.patch(`http://localhost:3000/stories/${id}`, values);
+            return axios.patch(`http://localhost:3000/stories/${id}`, {title:values.title}, values);
 
         },
         onSuccess: () =>{
