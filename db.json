@@ -1,7 +1,7 @@
 {
   "stories": [
     {
-      "title": "Naruto",
+      "title": "Narutoodddddd",
       "author": "khong biet ten tac giag",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSijajcNub-_0abpb6EueY2tvePT7SS-6wbWlmjxuOOJvovcp1lCjLatK6mwIqrr5TbXpn4W1vbg3QZldRAS1iTiGFCp3niuklnUV4CUCM&s=10",
       "description": "truyen nay hay lam nhung t chua doc daud",
@@ -18,6 +18,20 @@
       "categoryId": 10,
       "description": "dd",
       "id": 3
+    },
+    {
+      "title": "naruto",
+      "author": "khong biet ten tac gia",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSijajcNub-_0abpb6EueY2tvePT7SS-6wbWlmjxuOOJvovcp1lCjLatK6mwIqrr5TbXpn4W1vbg3QZldRAS1iTiGFCp3niuklnUV4CUCM&s=10",
+      "description": "điện thoại siêu đỉnh siêu cấp vũ trụ",
+      "id": 4
+    },
+    {
+      "title": "naruto",
+      "author": "khong biet ten tac gia",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSijajcNub-_0abpb6EueY2tvePT7SS-6wbWlmjxuOOJvovcp1lCjLatK6mwIqrr5TbXpn4W1vbg3QZldRAS1iTiGFCp3niuklnUV4CUCM&s=10",
+      "description": "điện thoại siêu đỉnh siêu cấp vũ trụ",
+      "id": 7
     }
   ],
   "categories": [

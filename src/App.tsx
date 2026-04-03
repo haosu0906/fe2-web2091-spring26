@@ -13,6 +13,8 @@ import { UserProvider } from "./context/UserContext";
 import { Login } from "./pages/Login";
 import { AppHeader } from "./components/Header";
 import Register from "./pages/Register";
+import AddStory from "./pages/StoryAdd";
+import ListStory from "./pages/StoryList";
 
 
 
@@ -64,6 +66,8 @@ function App() {
             <Route path="/edit/:id" element={<EditStory />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/storylist" element={<ListStory />} />
+            <Route path="/storyadd" element={<AddStory />} />
           </Routes>
 
         </div>
